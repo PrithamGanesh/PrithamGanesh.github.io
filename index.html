@@ -8,8 +8,102 @@
       content="Portfolio of Pritham Ganesh S, focused on AI-powered cybersecurity systems, intelligent monitoring, and modern digital products."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#6ff1d6" />
+    <meta name="author" content="Pritham Ganesh S" />
+    <meta name="keywords" content="cybersecurity, AI, Python, Flask, FastAPI, security monitoring, threat detection" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="English" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prithamganesh.github.io/" />
+    <meta property="og:title" content="Pritham Ganesh S | Cybersecurity Portfolio" />
+    <meta property="og:description" content="Portfolio of Pritham Ganesh S, focused on AI-powered cybersecurity systems, intelligent monitoring, and modern digital products." />
+    <meta property="og:image" content="https://prithamganesh.github.io/assets/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://prithamganesh.github.io/" />
+    <meta name="twitter:title" content="Pritham Ganesh S | Cybersecurity Portfolio" />
+    <meta name="twitter:description" content="Portfolio of Pritham Ganesh S, focused on AI-powered cybersecurity systems, intelligent monitoring, and modern digital products." />
+    <meta name="twitter:image" content="https://prithamganesh.github.io/assets/og-image.png" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://prithamganesh.github.io/" />
+
+    <!-- DNS Prefetch for External Resources -->
+    <link rel="dns-prefetch" href="https://github.com" />
+    <link rel="dns-prefetch" href="https://www.linkedin.com" />
+    <link rel="dns-prefetch" href="https://www.hackerrank.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pritham Ganesh S",
+      "url": "https://prithamganesh.github.io",
+      "email": "prithamganesh@gmail.com",
+      "jobTitle": "Cybersecurity Engineer",
+      "location": {
+        "@type": "City",
+        "name": "Chennai"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/pritham-ganesh-s-785092208",
+        "https://github.com/PrithamGanesh",
+        "https://www.hackerrank.com/prithamganesh"
+      ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "AI-powered systems",
+        "Python",
+        "Flask",
+        "FastAPI",
+        "Docker",
+        "PostgreSQL",
+        "Redis",
+        "Threat detection",
+        "Security monitoring",
+        "Real-time data pipelines"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://prithamganesh.github.io"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://prithamganesh.github.io#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contact",
+          "item": "https://prithamganesh.github.io#contact"
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="is-preload">
     <div class="page-shell">
@@ -45,6 +139,22 @@
                 rel="noreferrer"
               >
                 View GitHub
+              </a>
+              <a
+                class="button button-secondary"
+                href="resume.pdf"
+                download
+                aria-label="Download resume as PDF"
+              >
+                Download Resume
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://calendly.com/prithamganesh"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Schedule a Call
               </a>
             </div>
             <ul class="signal-list" aria-label="Highlights">
@@ -99,14 +209,14 @@
               </div>
               <h3>RiskEngine</h3>
               <p class="project-summary">
-                A Flask-based security monitor that inspects incoming traffic,
-                applies baseline protection checks, and generates interpretable
-                AI-assisted risk insights for operations teams.
+                A Flask-based security monitor that inspects incoming traffic, applies baseline protection checks, and generates interpretable AI-assisted risk insights for operations teams.
               </p>
               <ul class="project-points">
-                <li>Produces a 0-100 heuristic risk score with clear risk levels.</li>
-                <li>Captures suspicious activity, alerts, and IP abuse patterns.</li>
-                <li>Supports local development, Docker, and Nginx-backed deployment.</li>
+                <li><strong>Problem Solved:</strong> Raw security alerts are difficult to triage; operators need actionable risk signals with clear context.</li>
+                <li>Produces a 0-100 heuristic risk score with clear risk levels and visual indicators.</li>
+                <li>Captures suspicious activity, alerts, and IP abuse patterns with detailed logging.</li>
+                <li>Supports local development, Docker, and Nginx-backed deployment for production readiness.</li>
+                <li><strong>Key Learning:</strong> Balancing real-time threat detection with operator efficiency and system reliability.</li>
               </ul>
               <div class="tag-row" aria-label="RiskEngine stack">
                 <span>Flask</span>
@@ -134,14 +244,14 @@
               </div>
               <h3>LiveSOC</h3>
               <p class="project-summary">
-                An AI-leveraged cybersecurity dashboard for ingesting, scoring, and
-                visualizing network alerts in real time using a production-style
-                architecture.
+                An AI-leveraged cybersecurity dashboard for ingesting, scoring, and visualizing network alerts in real time using a production-style architecture with live threat enrichment.
               </p>
               <ul class="project-points">
-                <li>Streams alerts through Redis Pub/Sub to a live frontend feed.</li>
-                <li>Combines backend services, streaming, and a live interface into a cohesive SOC workflow.</li>
-                <li>Includes risk scoring, GeoIP enrichment, and attack simulation tooling.</li>
+                <li><strong>Challenge:</strong> Building a scalable alert pipeline that keeps SOC teams informed without overwhelming them with noise.</li>
+                <li>Streams alerts through Redis Pub/Sub to a live frontend feed with sub-second latency.</li>
+                <li>Combines backend services, real-time streaming, and operator-friendly interfaces into a cohesive SOC workflow.</li>
+                <li>Includes AI-powered risk scoring, GeoIP enrichment, and attack simulation tooling for testing.</li>
+                <li><strong>Outcome:</strong> Demonstrates full-stack threat monitoring architecture suitable for enterprise SOC environments.</li>
               </ul>
               <div class="tag-row" aria-label="LiveSOC stack">
                 <span>FastAPI</span>
