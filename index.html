@@ -1,44 +1,260 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Pritham's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pritham Ganesh S | Cybersecurity Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Portfolio of Pritham Ganesh S, a security-focused developer building modern cybersecurity and full-stack systems."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div class="page-shell">
+      <div class="ambient ambient-left"></div>
+      <div class="ambient ambient-right"></div>
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Pritham Ganesh S</h1>
-						<p>B.Tech IT &nbsp;&bull;&nbsp; Student &nbsp;&bull;&nbsp; Chennai, Tamil Nadu</p>
-						<nav>
-							<ul>
-								<li><a href="https://www.linkedin.com/in/pritham-ganesh-s-785092208" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://www.hackerrank.com/prithamganesh" class="icon brands fa-hackerrank"><span class="label">Hackerrank</span></a></li>
-								<li><a href="https://twitter.com/ganesh_pritham" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://github.com/PrithamGanesh" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="mailto:prithamganesh@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+      <header class="site-header">
+        <a class="brand" href="#top">Pritham Ganesh S</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#projects">Projects</a>
+          <a href="#strengths">Strengths</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; Design: Pritham Ganesh S.</span>
-					</footer>
+      <main id="top">
+        <section class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">Cybersecurity Portfolio</p>
+            <h1>Building secure systems with a modern engineering mindset.</h1>
+            <p class="hero-text">
+              I am based in Chennai and focused on cybersecurity, backend
+              systems, and data-driven products. My recent work spans risk
+              scoring, live alert pipelines, containerized delivery, and
+              full-stack dashboards for security operations.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:prithamganesh@gmail.com">Contact Me</a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/PrithamGanesh"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View GitHub
+              </a>
+            </div>
+            <ul class="signal-list" aria-label="Highlights">
+              <li>Security-first product development</li>
+              <li>Python, FastAPI, Flask, React, and Docker workflows</li>
+              <li>Real-time dashboards, monitoring, and risk analytics</li>
+            </ul>
+          </div>
 
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+          <aside class="hero-panel" aria-label="Professional summary">
+            <div class="status-card">
+              <p class="status-label">Current Focus</p>
+              <p class="status-value">Cybersecurity Engineering</p>
+              <p class="status-copy">
+                Designing monitoring systems that turn noisy events into usable
+                signals for faster operational decisions.
+              </p>
+            </div>
+            <div class="metric-grid">
+              <article class="metric-card">
+                <span class="metric-value">2</span>
+                <span class="metric-label">Featured security projects</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-value">Full Stack</span>
+                <span class="metric-label">Frontend to data pipeline delivery</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-value">Docker</span>
+                <span class="metric-label">Deployment-ready local workflows</span>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">Featured Work</p>
+            <h2>Projects that reflect a practical, security-oriented approach.</h2>
+            <p>
+              These repositories showcase how I think about observability,
+              threat detection, backend reliability, and operator-friendly
+              interfaces.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-meta">
+                <span class="project-badge">Featured Project</span>
+                <span class="project-repo">PrithamGanesh/RiskEngine</span>
+              </div>
+              <h3>RiskEngine</h3>
+              <p class="project-summary">
+                A Flask-based security monitor that inspects incoming traffic,
+                applies baseline protection checks, and generates interpretable
+                AI-assisted risk insights for operations teams.
+              </p>
+              <ul class="project-points">
+                <li>Produces a 0-100 heuristic risk score with clear risk levels.</li>
+                <li>Captures suspicious activity, alerts, and IP abuse patterns.</li>
+                <li>Supports local development, Docker, and Nginx-backed deployment.</li>
+              </ul>
+              <div class="tag-row" aria-label="RiskEngine stack">
+                <span>Flask</span>
+                <span>Python</span>
+                <span>Security Logging</span>
+                <span>Docker</span>
+                <span>Nginx</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/PrithamGanesh/RiskEngine"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Repository
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card project-card-accent">
+              <div class="project-meta">
+                <span class="project-badge">Real-Time SOC Platform</span>
+                <span class="project-repo">PrithamGanesh/cyber-threat-dashboard</span>
+              </div>
+              <h3>LiveSOC</h3>
+              <p class="project-summary">
+                A full-stack cybersecurity dashboard for ingesting, scoring, and
+                visualizing network alerts in real time using a production-style
+                architecture.
+              </p>
+              <ul class="project-points">
+                <li>Streams alerts through Redis Pub/Sub to a live frontend feed.</li>
+                <li>Combines FastAPI, PostgreSQL, and React into a cohesive SOC workflow.</li>
+                <li>Includes risk scoring, GeoIP enrichment, and attack simulation tooling.</li>
+              </ul>
+              <div class="tag-row" aria-label="LiveSOC stack">
+                <span>FastAPI</span>
+                <span>React</span>
+                <span>Redis</span>
+                <span>PostgreSQL</span>
+                <span>Suricata</span>
+                <span>Zeek</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/PrithamGanesh/cyber-threat-dashboard"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Repository
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="strengths">
+          <div class="section-heading">
+            <p class="eyebrow">What I Bring</p>
+            <h2>Technical depth with a product-focused way of thinking.</h2>
+          </div>
+
+          <div class="strength-grid">
+            <article class="strength-card">
+              <h3>Secure Backend Engineering</h3>
+              <p>
+                I focus on building backend systems that handle validation,
+                observability, resilience, and actionable security signals from
+                the start.
+              </p>
+            </article>
+            <article class="strength-card">
+              <h3>Real-Time Data Flows</h3>
+              <p>
+                I enjoy systems where ingestion, scoring, streaming, and
+                operator feedback all need to work together without becoming
+                hard to reason about.
+              </p>
+            </article>
+            <article class="strength-card">
+              <h3>Professional Delivery</h3>
+              <p>
+                My projects are shaped with clean structure, deployment-aware
+                workflows, and documentation that makes them easier to run,
+                review, and improve.
+              </p>
+            </article>
+          </div>
+
+          <div class="tooling-panel">
+            <p class="tooling-title">Core Tools</p>
+            <div class="tag-row" aria-label="Core tools">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>FastAPI</span>
+              <span>React</span>
+              <span>Docker Compose</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+              <span>Nginx</span>
+              <span>Cybersecurity</span>
+              <span>Threat Monitoring</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer section" id="contact">
+        <div class="footer-copy">
+          <p class="eyebrow">Let&apos;s Connect</p>
+          <h2>Open to internships, collaborations, and security-focused product work.</h2>
+          <p>
+            If you want to discuss cybersecurity, backend engineering, or
+            full-stack product development, I&apos;d be glad to connect.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:prithamganesh@gmail.com">
+            <span class="icon solid fa-envelope" aria-hidden="true"></span>
+            <span>Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/pritham-ganesh-s-785092208" target="_blank" rel="noreferrer">
+            <span class="icon brands fa-linkedin" aria-hidden="true"></span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/PrithamGanesh" target="_blank" rel="noreferrer">
+            <span class="icon brands fa-github" aria-hidden="true"></span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.hackerrank.com/prithamganesh" target="_blank" rel="noreferrer">
+            <span class="icon brands fa-hackerrank" aria-hidden="true"></span>
+            <span>HackerRank</span>
+          </a>
+        </div>
+        <p class="footer-note">
+          <span id="year">2026</span> Pritham Ganesh S. Built for clarity,
+          professionalism, and strong project storytelling.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.remove("is-preload");
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
 </html>
