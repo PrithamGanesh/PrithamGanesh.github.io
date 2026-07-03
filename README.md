@@ -17,6 +17,8 @@ The portfolio currently showcases:
 
 - **RiskEngine**: an AI-assisted security monitor with heuristic risk scoring, alert generation, and container-ready deployment
 - **LiveSOC**: an AI-leveraged cyber threat dashboard for real-time alert ingestion, scoring, and monitoring workflows
+- **Smart Interview Intelligence**: an AI-assisted resume screening and candidate ranking platform with semantic matching, skill-gap analysis, and interview question generation
+- **ATS Resume Generator**: a self-hosted, privacy-first ATS resume and CV generator that uses deterministic rules instead of external AI APIs
 
 ## Stack
 

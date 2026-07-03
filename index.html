@@ -7,11 +7,16 @@
       name="description"
       content="Portfolio of Pritham Ganesh S, focused on AI-powered cybersecurity systems, intelligent monitoring, and modern digital products."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#6ff1d6" />
     <meta name="author" content="Pritham Ganesh S" />
     <meta name="keywords" content="cybersecurity, AI, Python, Flask, FastAPI, security monitoring, threat detection" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="language" content="English" />
     
     <!-- Open Graph / Facebook -->
@@ -46,6 +51,7 @@
 
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="assets/js/main.js" defer></script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -178,8 +184,8 @@
             </div>
             <div class="metric-grid">
               <article class="metric-card">
-                <span class="metric-value">2</span>
-                <span class="metric-label">Featured security projects</span>
+                <span class="metric-value">4</span>
+                <span class="metric-label">Featured AI and systems projects</span>
               </article>
               <article class="metric-card">
                 <span class="metric-value">AI Leveraged</span>
@@ -196,11 +202,11 @@
         <section class="section" id="projects">
           <div class="section-heading">
             <p class="eyebrow">Featured Work</p>
-            <h2>Projects that reflect a practical, security-oriented approach.</h2>
+            <h2>Projects that reflect a practical, AI-leveraged approach to real problems.</h2>
             <p>
-              These repositories showcase how I think about observability,
-              threat detection, backend reliability, and operator-friendly
-              interfaces.
+              These repositories showcase how I think about intelligent
+              automation, observability, backend reliability, and
+              operator-friendly interfaces across security and hiring workflows.
             </p>
           </div>
 
@@ -268,6 +274,81 @@
                 <a
                   class="text-link"
                   href="https://github.com/PrithamGanesh/cyber-threat-dashboard"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Repository
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">
+                <span class="project-badge">AI-Assisted Hiring Intelligence</span>
+                <span class="project-repo">PrithamGanesh/smart-interview-intelligence</span>
+              </div>
+              <h3>Smart Interview Intelligence</h3>
+              <p class="project-summary">
+                An AI-assisted resume screening and candidate ranking platform
+                built to improve recruiter decision-making with semantic
+                matching, skill-gap analysis, and interview question generation.
+              </p>
+              <ul class="project-points">
+                <li><strong>Problem Solved:</strong> Recruiters need faster, more consistent candidate evaluation without relying only on manual screening.</li>
+                <li>Uses semantic resume-job matching with Sentence Transformers and a TF-IDF fallback for robust scoring.</li>
+                <li>Supports candidate ranking, skill-gap severity analysis, interview question generation, and success prediction.</li>
+                <li>Includes production-minded components such as FastAPI, monitoring, Docker, Redis, and PostgreSQL-ready configuration.</li>
+                <li><strong>Key Learning:</strong> Building AI-assisted decision systems requires both model intelligence and strong operational reliability.</li>
+              </ul>
+              <div class="tag-row" aria-label="Smart Interview Intelligence stack">
+                <span>FastAPI</span>
+                <span>Sentence Transformers</span>
+                <span>XGBoost</span>
+                <span>Redis</span>
+                <span>Prometheus</span>
+                <span>Grafana</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/PrithamGanesh/smart-interview-intelligence"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Repository
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">
+                <span class="project-badge">Privacy-First Resume Tooling</span>
+                <span class="project-repo">PrithamGanesh/ats-resume-generator</span>
+              </div>
+              <h3>ATS Resume Generator</h3>
+              <p class="project-summary">
+                A self-hosted ATS-friendly resume and CV generator that
+                optimizes content locally using deterministic rules, with no
+                external AI APIs, token costs, or third-party data exposure.
+              </p>
+              <ul class="project-points">
+                <li><strong>Problem Solved:</strong> Job seekers need ATS optimization without sacrificing privacy or depending on paid API services.</li>
+                <li>Parses PDF, DOCX, and TXT resumes locally and generates ATS-friendly PDF or DOCX outputs.</li>
+                <li>Uses rule-based keyword matching and scoring instead of external LLM calls, making the workflow fast and predictable.</li>
+                <li>Deletes uploaded files after parsing to support a stronger privacy posture.</li>
+                <li><strong>Key Learning:</strong> Intelligent products do not always need generative AI when deterministic logic is more trustworthy and efficient.</li>
+              </ul>
+              <div class="tag-row" aria-label="ATS Resume Generator stack">
+                <span>Node.js</span>
+                <span>Rule-Based Scoring</span>
+                <span>PDF Generation</span>
+                <span>DOCX Generation</span>
+                <span>Local Processing</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/PrithamGanesh/ats-resume-generator"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -363,11 +444,5 @@
       </footer>
     </div>
 
-    <script>
-      window.addEventListener("load", function () {
-        document.body.classList.remove("is-preload");
-        document.getElementById("year").textContent = new Date().getFullYear();
-      });
-    </script>
   </body>
 </html>
