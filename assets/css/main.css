@@ -197,6 +197,8 @@ img {
 .hero-panel,
 .project-card,
 .strength-card,
+.credential-card,
+.publication-panel,
 .tooling-panel,
 .site-footer {
   border: 1px solid var(--line);
@@ -267,6 +269,8 @@ h3 {
 .project-summary,
 .project-points li,
 .strength-card p,
+.credential-card p,
+.publication-card p,
 .status-copy,
 .footer-copy p {
   color: var(--muted);
@@ -366,6 +370,7 @@ h3 {
 .status-label,
 .project-repo,
 .metric-label,
+.credential-meta,
 .tooling-title {
   color: var(--muted);
   font-size: 0.88rem;
@@ -424,7 +429,8 @@ h3 {
 }
 
 .project-grid,
-.strength-grid {
+.strength-grid,
+.credential-grid {
   display: grid;
   gap: 1.25rem;
   margin-top: 2rem;
@@ -436,6 +442,8 @@ h3 {
 
 .project-card,
 .strength-card,
+.credential-card,
+.publication-panel,
 .tooling-panel {
   border-radius: var(--radius-md);
 }
@@ -567,7 +575,8 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.strength-card {
+.strength-card,
+.credential-card {
   padding: 1.6rem;
   animation: rise 0.8s ease both;
 }
@@ -584,8 +593,64 @@ h3 {
   animation-delay: 0.18s;
 }
 
-.strength-card p {
+.strength-card p,
+.credential-card p {
   margin-top: 0.85rem;
+}
+
+.credential-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.credential-card {
+  min-height: 18rem;
+}
+
+.credential-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.credential-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.credential-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.credential-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.credential-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.credential-meta {
+  margin-bottom: 0.85rem;
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.publication-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.publication-card {
+  padding: 1.5rem;
+  border-left: 3px solid var(--teal);
+  background: linear-gradient(135deg, rgba(111, 241, 214, 0.08), rgba(246, 194, 107, 0.05));
+}
+
+.publication-card p:last-child {
+  margin-top: 0.9rem;
 }
 
 .tooling-panel {
@@ -691,7 +756,9 @@ h3 {
 @media screen and (max-width: 1080px) {
   .hero,
   .project-grid,
-  .strength-grid {
+  .strength-grid,
+  .credential-grid,
+  .publication-panel {
     grid-template-columns: 1fr;
   }
 
@@ -732,6 +799,8 @@ h3 {
   .hero-panel,
   .project-card,
   .strength-card,
+  .credential-card,
+  .publication-panel,
   .tooling-panel,
   .site-footer {
     padding-left: 1.3rem;
