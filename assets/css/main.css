@@ -753,6 +753,457 @@ h3 {
   }
 }
 
+/* ===== #1: Scroll-Triggered Reveals ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== #3: Sticky Header with Glass ===== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  border-bottom: 1px solid transparent;
+  margin-bottom: -1px;
+}
+
+.site-header.scrolled {
+  background: rgba(7, 17, 31, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.28);
+  border-bottom-color: var(--line);
+}
+
+.site-nav a.nav-active {
+  color: var(--teal);
+}
+
+.site-nav a.nav-active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 2px;
+  border-radius: 999px;
+  background: var(--teal);
+  animation: navDotIn 0.3s ease both;
+}
+
+@keyframes navDotIn {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ===== #4: Scroll Progress Bar ===== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  z-index: 9999;
+  transition: width 0.05s linear;
+  pointer-events: none;
+}
+
+/* ===== #6: Card Hover Micro-Interactions ===== */
+
+.project-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px) scale(1.008);
+  border-color: rgba(111, 241, 214, 0.22);
+  box-shadow: 0 36px 90px rgba(0, 0, 0, 0.38),
+              0 0 0 1px rgba(111, 241, 214, 0.06);
+}
+
+.strength-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.strength-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(111, 241, 214, 0.2);
+}
+
+.credential-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(111, 241, 214, 0.18);
+  box-shadow: var(--shadow),
+              inset 0 0 32px rgba(111, 241, 214, 0.04);
+}
+
+.tag-row span {
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.tag-row span:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: scale(1.05);
+}
+
+.footer-links a:hover {
+  border-color: rgba(111, 241, 214, 0.45);
+}
+
+.footer-links a:hover .icon {
+  color: var(--teal);
+}
+
+/* ===== #7: Magnetic CTA ===== */
+
+.button-primary {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease,
+              outline 0.2s ease;
+}
+
+.button-primary:hover {
+  box-shadow: 0 0 24px rgba(111, 241, 214, 0.3),
+              0 8px 32px rgba(111, 241, 214, 0.15);
+}
+
+/* ===== #8: Hero Panel Tilt ===== */
+
+.hero-panel {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+/* ===== #10: Typing Cursor ===== */
+
+.typing-cursor::after {
+  content: "|";
+  display: inline-block;
+  color: var(--teal);
+  font-weight: 300;
+  animation: blink 0.85s step-end infinite;
+  margin-left: 2px;
+}
+
+.typing-cursor.done::after {
+  display: none;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+/* ===== #12: Page Load Curtain ===== */
+
+.load-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: linear-gradient(160deg, #07111f, #091729);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  pointer-events: all;
+}
+
+.load-curtain::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(111, 241, 214, 0.2);
+  border-top-color: var(--teal);
+  border-radius: 50%;
+  animation: curtainSpin 0.7s linear infinite;
+}
+
+.load-curtain.lifted {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes curtainSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== #13: Skeleton Shimmer ===== */
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(255, 255, 255, 0.06) 60%,
+    transparent 100%
+  );
+  animation: shimmer 1.6s ease infinite;
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ===== #14: Focus Ring Pulse ===== */
+
+@keyframes focusPulse {
+  0%   { outline-offset: 2px; }
+  50%  { outline-offset: 5px; }
+  100% { outline-offset: 2px; }
+}
+
+.button:focus-visible,
+.text-link:focus-visible,
+.footer-links a:focus-visible,
+.brand:focus-visible,
+.site-nav a:focus-visible {
+  animation: focusPulse 1.2s ease 1;
+}
+
+/* ===== #11: Dark/Light Theme Toggle ===== */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  color: var(--teal);
+  border-color: rgba(111, 241, 214, 0.3);
+  transform: scale(1.08);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: inline; }
+
+[data-theme="light"] {
+  --bg: #f2f4f8;
+  --bg-soft: #e8ecf2;
+  --panel: rgba(255, 255, 255, 0.82);
+  --panel-strong: rgba(255, 255, 255, 0.94);
+  --line: rgba(30, 50, 80, 0.12);
+  --text: #0e1726;
+  --muted: #4a5e73;
+  --teal: #0d9e8e;
+  --teal-deep: #0b7a6e;
+  --gold: #c48a2a;
+  --shadow: 0 32px 80px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] body,
+body[data-theme="light"] {
+  background:
+    radial-gradient(circle at top left, rgba(13, 158, 142, 0.1), transparent 34%),
+    radial-gradient(circle at 85% 18%, rgba(196, 138, 42, 0.08), transparent 28%),
+    linear-gradient(160deg, #f2f4f8 0%, #e8ecf2 42%, #f0f2f6 100%);
+  color: var(--text);
+}
+
+[data-theme="light"] .hero-copy,
+[data-theme="light"] .hero-panel,
+[data-theme="light"] .project-card,
+[data-theme="light"] .strength-card,
+[data-theme="light"] .credential-card,
+[data-theme="light"] .publication-panel,
+[data-theme="light"] .tooling-panel,
+[data-theme="light"] .site-footer {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(248, 250, 254, 0.94));
+  border-color: var(--line);
+}
+
+[data-theme="light"] .site-header.scrolled {
+  background: rgba(242, 244, 248, 0.88);
+}
+
+[data-theme="light"] .load-curtain {
+  background: linear-gradient(160deg, #f2f4f8, #e8ecf2);
+}
+
+[data-theme="light"] .load-curtain::after {
+  border-color: rgba(13, 158, 142, 0.2);
+  border-top-color: var(--teal);
+}
+
+[data-theme="light"] .button-secondary {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text);
+}
+
+[data-theme="light"] .button-primary {
+  background: linear-gradient(135deg, var(--teal) 0%, #0bb5a5 100%);
+  color: #fff;
+}
+
+[data-theme="light"] .status-card {
+  background:
+    linear-gradient(160deg, rgba(13, 158, 142, 0.06), transparent 50%),
+    rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .metric-card {
+  border-color: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .tag-row span {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text);
+}
+
+[data-theme="light"] .footer-links a {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+  color: var(--text);
+}
+
+[data-theme="light"] .project-badge {
+  background: rgba(13, 158, 142, 0.1);
+}
+
+[data-theme="light"] .ambient-left {
+  background: radial-gradient(circle, rgba(13, 158, 142, 0.12), transparent 70%);
+}
+
+[data-theme="light"] .ambient-right {
+  background: radial-gradient(circle, rgba(196, 138, 42, 0.1), transparent 72%);
+}
+
+[data-theme="light"] .signal-list li {
+  color: #2a3a4e;
+}
+
+[data-theme="light"] .signal-list li:before {
+  background: linear-gradient(135deg, var(--teal), var(--gold));
+}
+
+[data-theme="light"] .metric-value {
+  color: var(--text);
+}
+
+[data-theme="light"] .publication-card {
+  background: linear-gradient(135deg, rgba(13, 158, 142, 0.06), rgba(196, 138, 42, 0.04));
+  border-left-color: var(--teal);
+}
+
+[data-theme="light"] .credential-meta {
+  color: var(--gold);
+}
+
+[data-theme="light"] .project-card-accent {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(252, 248, 240, 0.95)),
+    linear-gradient(135deg, rgba(196, 138, 42, 0.06), transparent 45%);
+}
+
+[data-theme="light"] .scroll-progress {
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+}
+
+[data-theme="light"] .theme-toggle {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--muted);
+}
+
+[data-theme="light"] .theme-toggle .icon-sun  { display: inline; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+/* ===== #15: Reduced Motion ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .project-card,
+  .strength-card,
+  .credential-card {
+    animation: none;
+  }
+
+  .typing-cursor::after {
+    animation: none;
+    display: none;
+  }
+
+  .load-curtain::after {
+    animation: none;
+  }
+
+  .scroll-progress {
+    transition: none;
+  }
+
+  .site-header {
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .hero,
   .project-grid,

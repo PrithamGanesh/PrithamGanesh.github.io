@@ -143,6 +143,8 @@
     </script>
   </head>
   <body class="is-preload">
+    <div class="load-curtain" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <div class="page-shell">
       <div class="ambient ambient-left"></div>
       <div class="ambient ambient-right"></div>
@@ -155,6 +157,10 @@
           <a href="#certifications">Certifications</a>
           <a href="#publications">Publications</a>
           <a href="#contact">Contact</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+            <span class="icon-moon" aria-hidden="true">&#9790;</span>
+            <span class="icon-sun" aria-hidden="true">&#9788;</span>
+          </button>
         </nav>
       </header>
 
@@ -215,15 +221,15 @@
             </div>
             <div class="metric-grid">
               <article class="metric-card">
-                <span class="metric-value">4</span>
+                <span class="metric-value" data-count="4">4</span>
                 <span class="metric-label">Featured AI and systems projects</span>
               </article>
               <article class="metric-card">
-                <span class="metric-value">5</span>
+                <span class="metric-value" data-count="5">5</span>
                 <span class="metric-label">Professional certifications across AI, cloud, DevOps, security, and testing</span>
               </article>
               <article class="metric-card">
-                <span class="metric-value">1</span>
+                <span class="metric-value" data-count="1">1</span>
                 <span class="metric-label">Taylor & Francis publication on sustainable disruptive technologies</span>
               </article>
             </div>
@@ -242,7 +248,7 @@
           </div>
 
           <div class="project-grid">
-            <article class="project-card">
+            <article class="project-card reveal" data-reveal-delay="0">
               <div class="project-meta">
                 <span class="project-badge">Featured Project</span>
                 <span class="project-repo">PrithamGanesh/RiskEngine</span>
@@ -277,7 +283,7 @@
               </div>
             </article>
 
-            <article class="project-card project-card-accent">
+            <article class="project-card project-card-accent reveal" data-reveal-delay="80">
               <div class="project-meta">
                 <span class="project-badge">Real-Time SOC Platform</span>
                 <span class="project-repo">PrithamGanesh/cyber-threat-dashboard</span>
@@ -313,7 +319,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal" data-reveal-delay="160">
               <div class="project-meta">
                 <span class="project-badge">AI-Assisted Hiring Intelligence</span>
                 <span class="project-repo">PrithamGanesh/smart-interview-intelligence</span>
@@ -351,7 +357,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal" data-reveal-delay="240">
               <div class="project-meta">
                 <span class="project-badge">Privacy-First Resume Tooling</span>
                 <span class="project-repo">PrithamGanesh/ats-resume-generator</span>
@@ -397,7 +403,7 @@
           </div>
 
           <div class="strength-grid">
-            <article class="strength-card">
+            <article class="strength-card reveal" data-reveal-delay="0">
               <h3>Secure Backend Engineering</h3>
               <p>
                 I focus on building backend systems that handle validation,
@@ -405,7 +411,7 @@
                 the start.
               </p>
             </article>
-            <article class="strength-card">
+            <article class="strength-card reveal" data-reveal-delay="80">
               <h3>Real-Time Data Flows</h3>
               <p>
                 I enjoy systems where ingestion, scoring, streaming, and
@@ -413,7 +419,7 @@
                 hard to reason about.
               </p>
             </article>
-            <article class="strength-card">
+            <article class="strength-card reveal" data-reveal-delay="160">
               <h3>Professional Delivery</h3>
               <p>
                 My projects are shaped with clean structure, deployment-aware
@@ -451,7 +457,7 @@
           </div>
 
           <div class="credential-grid">
-            <article class="credential-card">
+            <article class="credential-card reveal" data-reveal-delay="0">
               <p class="credential-meta">AI Development</p>
               <h3>Claude Certified Developer - Foundations</h3>
               <p>
@@ -459,7 +465,7 @@
                 prompt-aware implementation, and practical model use.
               </p>
             </article>
-            <article class="credential-card">
+            <article class="credential-card reveal" data-reveal-delay="60">
               <p class="credential-meta">Cybersecurity</p>
               <h3>Cisco Certified Ethical Hacker</h3>
               <p>
@@ -467,7 +473,7 @@
                 assessment practices for defensive engineering.
               </p>
             </article>
-            <article class="credential-card">
+            <article class="credential-card reveal" data-reveal-delay="120">
               <p class="credential-meta">DevOps</p>
               <h3>Microsoft Certified: DevOps Engineer Expert</h3>
               <p>
@@ -475,7 +481,7 @@
                 and reliable software release processes.
               </p>
             </article>
-            <article class="credential-card">
+            <article class="credential-card reveal" data-reveal-delay="180">
               <p class="credential-meta">Cloud</p>
               <h3>IBM Certified - Cloud Advocate v2</h3>
               <p>
@@ -483,7 +489,7 @@
                 and platform-oriented solution thinking.
               </p>
             </article>
-            <article class="credential-card">
+            <article class="credential-card reveal" data-reveal-delay="240">
               <p class="credential-meta">Software Testing</p>
               <h3>ISTQB Certified Tester: Foundation Level</h3>
               <p>
@@ -500,7 +506,7 @@
               <p class="eyebrow">Publications</p>
               <h2>Research-oriented work on technology for sustainable systems.</h2>
             </div>
-            <article class="publication-card">
+            <article class="publication-card reveal" data-reveal-delay="0">
               <p class="credential-meta">Taylor & Francis | 2023</p>
               <h3>Disruptive Technologies for Sustainable Development</h3>
               <p>
